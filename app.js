@@ -13,7 +13,12 @@ const productRoutes = require("./routes/products");
 const orderRoutes = require("./routes/orders");
 const ratingRoutes = require("./routes/ratingReview");
 
-app.use(logger("dev"));
+// Middleware untuk logging semua request, kecuali favicon.ico
+app.use(
+  logger("dev", {
+    skip: (req, res) => req.originalUrl === "/favicon.ico",
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

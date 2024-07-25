@@ -1,7 +1,7 @@
 ### Define the base URL and tokens
-@baseURL = http://localhost:3000
-@penjualToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJwZW5qdWFsMiIsInJvbGUiOiJwZW5qdWFsIiwiaWF0IjoxNzIxOTExODE4LCJleHAiOjE3MjE5MTU0MTh9.EcksMbeYnPj_jg8ojbtQxKZrQoFXUIsp-8svVlrP7zs
-@pelangganToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJwZWxhbmdnYW4yIiwicm9sZSI6InBlbGFuZ2dhbiIsImlhdCI6MTcyMTkxMTgzMSwiZXhwIjoxNzIxOTE1NDMxfQ.vuVqw-cs_JB-zbqHPC0VZryN9cW1cmboqj63GqAFAX8
+@baseURL = https://rezaalfakarani-production.up.railway.app/
+@penjualToken = <pasteTokenPenjual>
+@pelangganToken = <pasteTokenPelanggan>
 
 ### Register a new admin user
 POST {{baseURL}}/api/auth/register
