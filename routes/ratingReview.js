@@ -6,6 +6,9 @@ const { authenticateToken, authorizeRole } = require("../middleware/auth");
 router.use(authenticateToken);
 
 router.get(ratingReviewController.getRatingReviews);
-router.get(ratingReviewController.createRatingReview);
+router.post(
+  authorizeRole("pelanggan"),
+  ratingReviewController.createRatingReview
+);
 
 module.exports = router;

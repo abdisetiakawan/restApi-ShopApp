@@ -5,9 +5,9 @@ const { authenticateToken, authorizeRole } = require("../middleware/auth");
 
 router.use(authenticateToken);
 
-router.get(ordersController.getOrders);
-router.post(ordersController.createOrder);
-router.put("/:id", ordersController.updateOrder);
-router.delete("/:id", ordersController.updateOrder);
+router.get(authorizeRole("penjual"), ordersController.getOrders);
+router.post(authorizeRole("penjual"), ordersController.createOrder);
+router.put("/:id", authorizeRole("penjual"), ordersController.updateOrder);
+router.delete("/:id", authorizeRole("penjual"), ordersController.updateOrder);
 
 module.exports = router;
