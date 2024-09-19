@@ -10,9 +10,4 @@ router.post(ordersController.createOrder);
 router.put("/:id", ordersController.updateOrder);
 router.delete("/:id", ordersController.updateOrder);
 
-router.get("/", menuController.getMenuItems);
-router.post("/", authorizeRole("owner"), menuController.createMenuItem);
-router.put("/:id", authorizeRole("owner"), menuController.updateMenuItem);
-router.delete("/:id", authorizeRole("owner"), menuController.deleteMenuItem);
-
 module.exports = router;
