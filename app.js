@@ -13,7 +13,6 @@ const productRoutes = require("./routes/products");
 const orderRoutes = require("./routes/orders");
 const ratingRoutes = require("./routes/ratingReview");
 
-// Middleware untuk logging semua request, kecuali favicon.ico
 app.use(
   logger("dev", {
     skip: (req, res) => req.originalUrl === "/favicon.ico",
@@ -42,7 +41,7 @@ sequelize
   });
 
 app.get("/", (req, res) => {
-  res.send("Aplikasi Jual Beli Fashion oleh: Ahmad Reza Alfakarani");
+  res.send("Aplikasi Jual Beli Fashion oleh: Abdi Setiawan");
 });
 
 const PORT = process.env.PORT || 3000;
