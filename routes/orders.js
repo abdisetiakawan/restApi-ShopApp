@@ -5,8 +5,8 @@ const { authenticateToken, authorizeRole } = require("../middleware/auth");
 
 router.use(authenticateToken);
 
-router.get(authorizeRole("penjual"), ordersController.getOrders);
-router.post(authorizeRole("penjual"), ordersController.createOrder);
+router.get("/", authorizeRole("penjual"), ordersController.getOrders);
+router.post("/", authorizeRole("pelanggan"), ordersController.createOrder);
 router.put("/:id", authorizeRole("penjual"), ordersController.updateOrder);
 router.delete("/:id", authorizeRole("penjual"), ordersController.updateOrder);
 
